@@ -1,3 +1,6 @@
+require 'rubygems'
+require 'metaid'
+
 # =========================
 # = Classical inheritance =
 # =========================
@@ -59,7 +62,7 @@ thor = PrototypalDog.clone
 thor.name = "Thor"
 thor.color = "black and tan"
 thor.weight = 18
-thor.send(:define_method, :arf) do
+thor.metaclass.send(:define_method, :arf) do
   "Will perform for food"
 end
 
